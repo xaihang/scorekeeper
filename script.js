@@ -39,18 +39,21 @@ p2Button.addEventListener('click', function () {
 //when user select or change #'s of games play up to - winning score total will stop at whichever it is select to
 winningScoreSelect.addEventListener('change', function () {
     winningScore = parseInt(this.value);
+    reset();
 })
 
 
 //reset button function:
-resetButton.addEventListener('click', function () {
+resetButton.addEventListener('click', reset)
+
+function () {
     isGameOver = false;
     p1Score = 0;
     p2Score = 0;
     p1Display.textContent = 0;
     p2Display.textContent = 0;
 
-})
+}
 
 
 
