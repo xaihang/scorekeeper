@@ -4,6 +4,8 @@ const p1Display = document.querySelector('#p1Display');
 const p2Display = document.querySelector('#p2Display');
 const resetButton = document.querySelector('#reset');
 
+//use the `change` event logic to apply to this var 
+const winningScoreSelect = document.querySelector('#playto');
 
 
 //logic: when click on player's button we want to add +1 to the current score and have that added score show on the span h1; keep track of the current score
@@ -32,6 +34,13 @@ p2Button.addEventListener('click', function () {
     }
 
 })
+
+//parseInt = a string convert into a number; converts a string to an integer
+//when user select or change #'s of games play up to - winning score total will stop at whichever it is select to
+winningScoreSelect.addEventListener('change', function () {
+    winningScore = parseInt(this.value);
+})
+
 
 //reset button function:
 resetButton.addEventListener('click', function () {
