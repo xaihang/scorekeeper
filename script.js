@@ -14,13 +14,33 @@ let p2Score = 0;
 let winningScore = 3;
 let isGameOver = false; //a boolean to keep track of who hit the winningscore first, if hit then game is over
 
+function updatedScores(player, opponent) {
+    if (!isGameOver) {
+        player.score += 1;
+        if (player.score === winningScore) {
+            isGameOver = true;
+            player.display.classList.add('has-text-success');
+            opponent.display.classList.add('has-text-danger');
+            player.button.disabled = true;
+            opponent.button.disabled = true;
+        }
+        player.display.textContent = player.score;
+    }
+}
+
+const p1 = {
+    score: 0,
+    button: document.querySelector('#p1Button'),
+    display: document.querySelector('#p1Display'),
+}
+
 p1Button.addEventListener('click', function () {
     if (!isGameOver) {
         p1Score += 1;
         if (p1Score === winningScore) {
             isGameOver = true;
-            p1Display.classList.add('winner');
-            p2Display.classLast.add('loser');
+            p1Display.classList.add('has-text-success');
+            p2Display.classLast.add('has-text-danger');
             p1Button.disabled = true;
             p2Button.disabled = true;
 
