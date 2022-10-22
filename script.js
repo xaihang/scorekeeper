@@ -7,6 +7,19 @@ const resetButton = document.querySelector('#reset');
 //use the `change` event logic to apply to this var 
 const winningScoreSelect = document.querySelector('#playto');
 
+const p1 = {
+    score: 0,
+    button: document.querySelector('#p1Button'),
+    display: document.querySelector('#p1Display'),
+}
+
+
+const p2 = {
+    score: 0,
+    button: document.querySelector('#p2Button'),
+    display: document.querySelector('#p2Display'),
+}
+
 
 //logic: when click on player's button we want to add +1 to the current score and have that added score show on the span h1; keep track of the current score
 let p1Score = 0;
@@ -28,17 +41,12 @@ function updatedScores(player, opponent) {
     }
 }
 
-const p1 = {
-    score: 0,
-    button: document.querySelector('#p1Button'),
-    display: document.querySelector('#p1Display'),
-}
 
-p1Button.addEventListener('click', function () {
+p1.button.addEventListener('click', function () {
     updatedScores(p1, p2)
 })
 
-p2Button.addEventListener('click', function () {
+p2.button.addEventListener('click', function () {
     updatedScores(p2, p1)
 })
 
