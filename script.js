@@ -35,33 +35,11 @@ const p1 = {
 }
 
 p1Button.addEventListener('click', function () {
-    if (!isGameOver) {
-        p1Score += 1;
-        if (p1Score === winningScore) {
-            isGameOver = true;
-            p1Display.classList.add('has-text-success');
-            p2Display.classLast.add('has-text-danger');
-            p1Button.disabled = true;
-            p2Button.disabled = true;
-
-        }
-        p1Display.textContent = p1Score;
-    }
+    updatedScores(p1, p2)
 })
 
 p2Button.addEventListener('click', function () {
-    if (!isGameOver) {
-        p2Score += 1;
-        if (p2Score === winningScore) {
-            isGameOver = true;
-            p2Display.classList.add('has-text-success');
-            p1Display.classLast.add('has-text-danger');
-            p1Button.disabled = true;
-            p2Button.disabled = true;
-        }
-        p2Display.textContent = p2Score;
-    }
-
+    updatedScores(p2, p1)
 })
 
 //parseInt = a string convert into a number; converts a string to an integer
