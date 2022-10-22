@@ -2,12 +2,14 @@
 
 
 ## SUMMARY:
-An app that allow you to keep track of a pingpong game between 2 players and the numbers of match they like to have. 
+An app that allow you to keep track of a pingpong score between 2 players per the numbers of matches they selected.
 
-## DEPLOYED LINK: https://xaihang.github.io/
+## DEPLOYED LINK: https://xaihang.github.io/scorekeeper/
 
 
 ### SCREENSHOT Image of application: 
-![Score Keeper app demo image](./screenshot.png)
+![Score Keeper app demo image](/screenshot.png)
 
 
+##### OTHERS:
+HTML and JavaScripts with Bulma (a CSS framework based on flexbox).  
